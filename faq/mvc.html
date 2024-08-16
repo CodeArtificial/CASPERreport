@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why MVC Folders?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h2 {
+            color: #007acc;
+        }
+        p {
+            margin: 15px 0;
+        }
+        ol {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        ol li {
+            margin-bottom: 10px;
+        }
+        code {
+            background-color: #e6e6e6;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        .highlight {
+            background-color: #dfeeff;
+            padding: 10px;
+            border-left: 5px solid #007acc;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Why do we have folders named <code>views</code>, <code>controllers</code>, and <code>model</code>? Why not rename the <code>views</code> folder to <code>windows</code>?</h2>
+
+    <div class="highlight">
+        <p>CASPER's directory structure is designed to follow the Model-View-Controller (MVC) or Model-View-ViewModel (MVVM) software development patterns, which divide the application into three interconnected components:</p>
+    </div>
+
+    <ol>
+        <li>
+            <strong>Model:</strong> The model represents the application's data and the logic that controls access to and updates of this data. Its responsibilities include managing the application's data, enforcing rules and logic for data creation, storage, and modification, and notifying the view and controller of any data changes to ensure they can update accordingly.
+        </li>
+        <li>
+            <strong>View:</strong> The view is responsible for presenting data from the model to the user. It generates the user interface and displays the model's data in a format that is easy to understand and interact with. Its responsibilities include displaying data through UI elements like text, images, and tables and capturing user input to send them to the controller. Note that it doesn't handle the input processing but passes it on.
+        </li>
+        <li>
+            <strong>Controller:</strong> The controller is an intermediary between the model and the view. It processes user inputs, interacts with the model, and updates the view accordingly. The controller's responsibilities include receiving input from the view, determining how to handle it, updating the model as needed, and instructing the view to update based on changes in the model.
+        </li>
+    </ol>
+
+    <div class="highlight">
+        <p>Together, they work as a unit. When a user interacts with the UI, such as clicking a button, the view sends this input to the controller. The controller processes the input and makes the necessary changes to the model. The model then updates its state based on the controller's instruction. After updating, the model notifies the view of any changes. Finally, the view updates the UI to show the updated data and information to the user.</p>
+    </div>
+
+    <h2>Benefits of Adopting MVC Design</h2>
+    <ol>
+        <li>It provides a separation of concerns, with each component having a specific responsibility, making the code easier to manage, test, and maintain.</li>
+        <li>It enhances reusability, as the separation allows components to be reused in different parts of the application.</li>
+        <li>It promotes testability, as each part of the MVC architecture can be tested independently.</li>
+    </ol>
+
+    <div class="highlight">
+        <p>For these reasons, MVC is widely adopted in web development frameworks, desktop applications, and mobile applications because it effectively organizes code and makes the applications more scalable and maintainable.</p>
+    </div>
+
+    <h2>Why Use the Term <code>views</code> Instead of <code>windows</code>?</h2>
+    <p>The folder is named <code>views</code> because it follows the MVC design pattern, where <code>views</code> are responsible for the presentation layer, including the UI elements that users interact with. The term <code>views</code> indicates the role of these components in displaying data and responding to user input rather than focusing on specific implementations like windows or dialogs. While <code>windows</code> refers to windowed elements in a graphical user interface, <code>views</code> encompasses a more extensive range of UI components.</p>
+</body>
+</html>
